@@ -112,7 +112,7 @@ h2 {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 550px;
+  top: 580px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -176,17 +176,13 @@ footer {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   z-index: -1;
+  object-fit: cover; /* Ensure the video covers the entire viewport */
   animation: fade-in 6s ease-in-out forwards;
 }
 
-/* Reset default browser styles */
-body, h1, h2, p, ul, li {
-  margin: 0;
-  padding: 0;
-}
 
 /* Content styles */
 .content {
@@ -197,6 +193,7 @@ body, h1, h2, p, ul, li {
 .content h1 {
   font-size: 36px;
   margin-bottom: 20px;
+  margin-top: 60px;
 }
 
 .content p {
@@ -216,30 +213,18 @@ body, h1, h2, p, ul, li {
   padding: 40px;
   padding-top: 0px;
 }
-
-.spotify-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.spotify-item {
-  margin-bottom: 20px;
-}
-
+/* Slideshow styles */
 .slideshow-container {
-  max-width: 100%; /* Adjust to fit the container within the screen */
+  max-width: 100%;
   position: relative;
   overflow: hidden;
-}
-
-.slideshow-container {
   display: flex;
 }
 
 .slide {
   flex: 1;
   margin-right: 10px;
-  max-width: 100%; /* Ensure images do not exceed container width */
+  max-width: 100%;
 }
 
 .slide:last-child {
@@ -247,10 +232,11 @@ body, h1, h2, p, ul, li {
 }
 
 .slide img {
-  width: 100%; /* Fill available space */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 100%; /* Ensure images do not exceed container width */
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
+
 
 
 .past-link {
@@ -292,4 +278,34 @@ body, h1, h2, p, ul, li {
     font-size: 80px;
     margin-bottom: 20px;
   }
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid black; /* Outline for the table */
+}
+
+th {
+  border: 1px solid black; /* Outline for table cells */
+  padding: 8px;
+  text-align: left;
+  color: black; /* Set font color to black */
+  
+
+}
+
+td:first-child {
+  padding-right: 20px; /* Adjust the padding as needed */
+  padding-bottom:5px;
+}
+tr {
+  border: 1px solid black; /* Outline for table cells */
+  padding: 8px;
+  text-align: left;
+  color: rgb(255, 255, 255); /* Set font color to black */
+
+}
+
+th {
+  background-color: #f2f2f2; /* Background color for header cells */
 }
